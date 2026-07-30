@@ -30,14 +30,19 @@ Request:
   "to": "de",
   "text": "Hello World"
 }
+```
 
 Response:
+```
 {
   "success": true,
   "translation": "Hallo Welt"
 }
+```
 
 Exit:
+```
 {
   "cmd": "exit"
 }
+```

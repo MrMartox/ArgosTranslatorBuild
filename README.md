@@ -2,7 +2,7 @@
 
 Argos Translator
 -------------
-Description from argos-translate: 
+Description from [argos-translate](https://github.com/argosopentech/argos-translate/): 
 
 > Open-source offline translation library written in Python
 >
@@ -11,3 +11,33 @@ Description from argos-translate:
 > Argos Translate also manages automatically pivoting through intermediate languages to translate between languages that don't have a direct translation between them installed. For example, if you have a es → en and en → fr translation installed you are able to translate from es → fr as if you had that translation installed. This allows for translating between a wide variety of languages at the cost of some loss of translation quality.
 >
 > The argospm-index repo contains metadata and download links to access pre-trained Argos Translate models.
+
+Usage
+-------------
+```
+translator.py update
+translator.py install translate-en_de
+translator.py runtime
+translator.py --from en --to de "Hello"
+```
+
+"runtime" uses the following json format:
+
+Request:
+```
+{
+  "from": "en",
+  "to": "de",
+  "text": "Hello World"
+}
+
+Response:
+{
+  "success": true,
+  "translation": "Hallo Welt"
+}
+
+Exit:
+{
+  "cmd": "exit"
+}
